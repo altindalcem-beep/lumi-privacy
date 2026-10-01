@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumi Destek & Gizlilik</title>
+<style>
+  /* Layout: single centered reading column, star-field purple identity, soft card sections */
+  :root{
+    --bg:#f4f2ff; --surface:#ffffff; --ink:#241b4a; --muted:#6b6690;
+    --brand:#7b6bff; --brand2:#a24bff; --accent:#ffb400; --line:#e7e3fb;
+    --maxw:720px;
+  }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+    --bg:#140f2e; --surface:#1e183f; --ink:#f1eeff; --muted:#a7a1cf;
+    --brand:#9d8dff; --brand2:#c07bff; --accent:#ffc83f; --line:#2c2556; color-scheme:dark;
+  }}
+  :root[data-theme="dark"]{
+    --bg:#140f2e; --surface:#1e183f; --ink:#f1eeff; --muted:#a7a1cf;
+    --brand:#9d8dff; --brand2:#c07bff; --accent:#ffc83f; --line:#2c2556; color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg); color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,system-ui,sans-serif; line-height:1.6;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding-inline:20px; padding-block:0 64px;}
+  header.hero{background:linear-gradient(160deg,var(--brand),var(--brand2)); color:#fff;
+    border-radius:0 0 28px 28px; padding:40px 20px 34px; text-align:center;}
+  .star{width:76px;height:76px;margin:0 auto 10px;display:block}
+  .hero h1{margin:.2em 0 .1em; font-size:26px; font-weight:900; letter-spacing:.3px; text-wrap:balance}
+  .hero p{margin:0; opacity:.92; font-size:15px}
+  h2{font-size:19px; margin:34px 0 10px; color:var(--ink)}
+  h3{font-size:15px; margin:18px 0 6px; color:var(--ink)}
+  p,li{color:var(--ink); font-size:15px}
+  .muted{color:var(--muted)}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:18px;
+    padding:18px 20px; margin-top:16px;}
+  ul{margin:8px 0; padding-left:20px} li{margin:4px 0}
+  .contact{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:8px}
+  .mail{font-weight:700; background:var(--bg); border:1px solid var(--line);
+    border-radius:10px; padding:8px 12px; user-select:all; min-width:0; word-break:break-all}
+  button.copy{border:none; background:var(--brand); color:#fff; font-weight:700;
+    border-radius:10px; padding:9px 14px; cursor:pointer; font-size:14px}
+  button.copy:active{transform:translateY(1px)}
+  .pill{display:inline-block; background:var(--accent); color:#4a3200; font-weight:800;
+    font-size:12px; padding:3px 10px; border-radius:20px}
+  .lang{display:flex; gap:8px; justify-content:center; margin:18px 0 0}
+  .lang button{border:1px solid var(--line); background:var(--surface); color:var(--ink);
+    border-radius:20px; padding:6px 16px; font-weight:700; cursor:pointer; font-size:14px}
+  .lang button[aria-pressed="true"]{background:var(--brand); color:#fff; border-color:var(--brand)}
+  footer{ text-align:center; margin-top:40px; color:var(--muted); font-size:13px}
+  a{color:var(--brand)}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:2px; border-radius:6px}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <svg class="star" viewBox="0 0 120 120" aria-hidden="true">
+    <circle cx="60" cy="60" r="54" fill="rgba(255,255,255,.16)"/>
+    <path d="M60 16 l14 31 34 3 -26 23 8 33 -30 -18 -30 18 8 -33 -26 -23 34 -3z" fill="#ffd23f" stroke="#e8b800" stroke-width="2"/>
+    <circle cx="50" cy="60" r="6" fill="#3a2f6b"/><circle cx="70" cy="60" r="6" fill="#3a2f6b"/>
+    <path d="M51 73 q9 11 18 0" stroke="#3a2f6b" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </svg>
+  <h1>Lumi Kids</h1>
+  <p>Destek &amp; Gizlilik Politikası · Support &amp; Privacy</p>
+</header>
+
+<div class="wrap">
+  <div class="lang" role="group" aria-label="Dil / Language">
+    <button id="btn-tr" aria-pressed="true">Türkçe</button>
+    <button id="btn-en" aria-pressed="false">English</button>
+  </div>
+
+  <!-- ================= TURKISH ================= -->
+  <section id="tr">
+    <h2>Destek</h2>
+    <div class="card">
+      <p>Lumi Kids hakkında soru, geri bildirim veya yardım için bize e-posta ile ulaşabilirsiniz. Genellikle 1-2 iş günü içinde yanıt veriyoruz.</p>
+      <div class="contact">
+        <span class="mail" id="mail-tr">altindal.cem@gmail.com</span>
+        <button class="copy" data-mail="altindal.cem@gmail.com">E-postayı kopyala</button>
+      </div>
+    </div>
+
+    <h2>Gizlilik Politikası</h2>
+    <p class="muted">Son güncelleme: 1 Ekim 2026</p>
+    <div class="card">
+      <p><span class="pill">Kişisel veri toplamıyoruz</span></p>
+      <p>Lumi Kids, 2-6 yaş çocuklar için tasarlanmış reklamsız bir öğrenme uygulamasıdır. Çocukların gizliliğini korumak önceliğimizdir.</p>
+
+      <h3>Topladığımız veriler</h3>
+      <ul>
+        <li>Lumi, ad, e-posta, konum, fotoğraf veya kişi listesi gibi <strong>hiçbir kişisel veriyi toplamaz</strong>.</li>
+        <li>Uygulama içi ilerleme (kazanılan yıldızlar, dil tercihi) yalnızca <strong>cihazınızda</strong> saklanır; bize veya üçüncü taraflara gönderilmez.</li>
+        <li>Uygulamada <strong>reklam yoktur</strong> ve üçüncü taraf reklam/izleme araçları kullanılmaz.</li>
+      </ul>
+
+      <h3>Abonelikler</h3>
+      <ul>
+        <li>Lumi Kulüp aboneliği <strong>Apple App Store</strong> üzerinden işlenir. Ödeme bilgilerinize biz erişemeyiz; bunları yalnızca Apple yönetir.</li>
+        <li>Abonelik durumunu yönetmek için <strong>RevenueCat</strong> hizmetini kullanıyoruz. RevenueCat, aboneliğinizi doğrulamak amacıyla Apple'ın sağladığı anonim bir satın alma tanımlayıcısını işler; bu veri çocuğunuzu tanımlamaz ve pazarlama için kullanılmaz.</li>
+      </ul>
+
+      <h3>Çocukların gizliliği</h3>
+      <p>Lumi çocuklara yöneliktir ve çocuklardan kişisel veri toplamaz. Satın alma işlemleri, çocukların yanlışlıkla işlem yapmasını önlemek için bir <strong>ebeveyn kapısı</strong> (basit bir matematik işlemi) arkasındadır.</p>
+
+      <h3>Veri paylaşımı</h3>
+      <p>Toplanan kişisel veri olmadığı için üçüncü taraflarla paylaşılan bir veri de yoktur.</p>
+
+      <h3>Değişiklikler</h3>
+      <p>Bu politikayı zaman zaman güncelleyebiliriz. Güncellemeler bu sayfada yayınlanır.</p>
+
+      <h3>İletişim</h3>
+      <p>Sorularınız için: <strong>altindal.cem@gmail.com</strong></p>
+    </div>
+  </section>
+
+  <!-- ================= ENGLISH ================= -->
+  <section id="en" hidden>
+    <h2>Support</h2>
+    <div class="card">
+      <p>For questions, feedback, or help with Lumi Kids, email us. We usually reply within 1-2 business days.</p>
+      <div class="contact">
+        <span class="mail">altindal.cem@gmail.com</span>
+        <button class="copy" data-mail="altindal.cem@gmail.com">Copy email</button>
+      </div>
+    </div>
+
+    <h2>Privacy Policy</h2>
+    <p class="muted">Last updated: October 1, 2026</p>
+    <div class="card">
+      <p><span class="pill">We collect no personal data</span></p>
+      <p>Lumi Kids is an ad-free learning app for children aged 2-6. Protecting children's privacy is our priority.</p>
+
+      <h3>Data we collect</h3>
+      <ul>
+        <li>Lumi collects <strong>no personal data</strong> such as name, email, location, photos, or contacts.</li>
+        <li>In-app progress (stars earned, language preference) is stored <strong>only on your device</strong> and is never sent to us or any third party.</li>
+        <li>The app contains <strong>no ads</strong> and uses no third-party advertising or tracking.</li>
+      </ul>
+
+      <h3>Subscriptions</h3>
+      <ul>
+        <li>The Lumi Club subscription is processed by the <strong>Apple App Store</strong>. We never access your payment details; only Apple handles them.</li>
+        <li>We use <strong>RevenueCat</strong> to manage subscription status. RevenueCat processes an anonymous purchase identifier provided by Apple solely to verify your subscription; it does not identify your child and is not used for marketing.</li>
+      </ul>
+
+      <h3>Children's privacy</h3>
+      <p>Lumi is directed to children and does not collect personal data from them. Purchases are placed behind a <strong>parental gate</strong> (a simple math task) to prevent accidental transactions.</p>
+
+      <h3>Data sharing</h3>
+      <p>Because no personal data is collected, none is shared with third parties.</p>
+
+      <h3>Changes</h3>
+      <p>We may update this policy from time to time. Updates are posted on this page.</p>
+
+      <h3>Contact</h3>
+      <p>Questions: <strong>altindal.cem@gmail.com</strong></p>
+    </div>
+  </section>
+
+  <footer>© 2026 Cem Altındal · Lumi Kids</footer>
+</div>
+
+<script>
+  const tr=document.getElementById('tr'), en=document.getElementById('en');
+  const bTr=document.getElementById('btn-tr'), bEn=document.getElementById('btn-en');
+  function show(lang){
+    const isTr=lang==='tr';
+    tr.hidden=!isTr; en.hidden=isTr;
+    bTr.setAttribute('aria-pressed',String(isTr));
+    bEn.setAttribute('aria-pressed',String(!isTr));
+  }
+  bTr.addEventListener('click',()=>show('tr'));
+  bEn.addEventListener('click',()=>show('en'));
+
+  document.querySelectorAll('button.copy').forEach(btn=>{
+    btn.addEventListener('click',async()=>{
+      const mail=btn.dataset.mail, old=btn.textContent;
+      try{ await navigator.clipboard.writeText(mail); btn.textContent='Kopyalandı ✓'; }
+      catch(e){
+        const r=document.createRange(); r.selectNodeContents(btn.previousElementSibling);
+        const s=getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent='Seçildi';
+      }
+      setTimeout(()=>btn.textContent=old,1600);
+    });
+  });
+</script>
+
+</body>
+</html>
